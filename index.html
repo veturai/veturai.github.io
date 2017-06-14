@@ -2,74 +2,22 @@
 <head>
     <title>Veturai</title>
     <link href="https://fonts.googleapis.com/css?family=Gruppo" rel="stylesheet">
-    <style type="text/css">
-        body {
-            margin: 0;
-            font-family: 'Gruppo', 'Helvetica', sans-serif;
-        }
-
-        .fullscreen-bg {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            overflow: hidden;
-            z-index: -100;
-            opacity: 0.09;
-        }
-
-        .fullscreen-bg__video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: auto;
-            height: auto;
-            min-width: 100%;
-            min-height: 100%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-
-        @media (max-width: 767px) {
-            .fullscreen-bg {
-                background: url('assets/img/bg.jpeg') center center / cover no-repeat;
-            }
-
-            .fullscreen-bg__video {
-                display: none;
-            }
-        }
-
-        .content {
-            width: 960px;
-            margin: auto auto;
-        }
-
-        .content__brand-wrapper {
-            position: absolute;
-
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-
-        .content__brand {
-            font-size: 70px;
-        }
-
-        .content__brand-subtitle {
-            font-size: 22px;
-            text-align: right;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="navbar__wrapper">
+            <div class="navbar__logo">Veturai</div>
+            <div class="navbar__menu">
+                <div class="navbar__menu-option">HOME</div>
+                <div class="navbar__menu-option">COMPANY</div>
+                <div class="navbar__menu-option">SCOPE</div>
+                <div class="navbar__menu-option">SERVICES</div>
+                <div class="navbar__menu-option">TEAM</div>
+            </div>
+        </div>
+    </div>
     <div class="fullscreen-bg">
         <video loop muted autoplay poster="assets/img/bg.jpeg" class="fullscreen-bg__video">
             <source src="assets/video/bg_1.mp4" type="video/mp4">
