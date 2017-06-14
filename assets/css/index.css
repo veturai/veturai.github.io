@@ -101,6 +101,7 @@ body {
   font-family: 'Gruppo', 'Helvetica', sans-serif;
   width: 960px;
   margin: auto auto;
+  overflow: auto;
 }
 
 .content__brand-wrapper {
