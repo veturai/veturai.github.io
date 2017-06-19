@@ -1,7 +1,6 @@
 (function() {
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
 
     // Get browser viewport height
     var browserHeight = $(window).height();
@@ -22,5 +21,18 @@
         opacity: 0.0
       });
     }
+  });
+
+  $(document).ready(function (){
+    $(".section-home").click(function (){
+      $('html, body').animate({
+        scrollTop: $(".content").offset().top
+      }, 500);
+    });
+    $(".section-company").click(function (){
+      $('html, body').animate({
+        scrollTop: $(".our-company").offset().top
+      }, 500);
+    });
   });
 })();
