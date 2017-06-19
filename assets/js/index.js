@@ -23,7 +23,7 @@
     }
   });
 
-  $(document).ready(function (){
+  var generateMenuClicks = function() {
     $(".section-home").click(function (){
       $('html, body').animate({
         scrollTop: $(".content").offset().top
@@ -34,5 +34,15 @@
         scrollTop: $(".our-company").offset().top
       }, 500);
     });
+  };
+
+  var generateFooterEmail = function() {
+    var contact = ['m','o','c','.','i','a','r','u','t','e','v','@','t','c','a','t','n','o','c'];
+    $('.footer__email').html(contact.reverse().join(''))
+  };
+
+  $(document).ready(function (){
+    generateMenuClicks();
+    generateFooterEmail();
   });
 })();
