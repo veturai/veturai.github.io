@@ -128,16 +128,46 @@ body {
 
 .our-company {
   background-color: #eaeaeb;
-  height: 500px;
 }
 
 .our-company__wrapper {
   width: 1024px;
   margin: auto;
+  padding: 100px 0;
 }
 
 .our-company__title {
-  padding-top: 100px;
   font-size: 50px;
   text-align: center;
+}
+
+.our-company__subtitle {
+  padding-top: 18px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.our-company__blocks-wrapper {
+  margin-top: 100px;
+  display: flex;
+}
+
+.our-company__block {
+  flex-basis: 100%;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.our-company__block-img {
+  height: 80px;
+}
+
+.our-company__block-img img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.our-company__block-text {
+  margin-top: 30px;
 }
