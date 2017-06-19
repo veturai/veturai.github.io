@@ -103,6 +103,7 @@ body {
   width: 960px;
   margin: auto auto;
   overflow: auto;
+  height: 100%;
 }
 
 .content__brand-wrapper {
@@ -122,4 +123,20 @@ body {
 .content__brand-subtitle {
   font-size: 22px;
   text-align: right;
+}
+
+.our-company {
+  background-color: #eaeaeb;
+  height: 500px;
+}
+
+.our-company__wrapper {
+  width: 1024px;
+  margin: auto;
+}
+
+.our-company__title {
+  padding-top: 100px;
+  font-size: 50px;
+  text-align: center;
 }
