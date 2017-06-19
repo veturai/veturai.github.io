@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     </script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/map.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -137,6 +138,7 @@
             </div>
         </div>
     </div>
+    <div id="map"></div>
     <footer>
         <div class="footer__wrapper">
             <div class="footer__copy">&copy; 2017 Veturai</div>
@@ -148,5 +150,8 @@
             <div class="footer__email"></div>
         </div>
     </footer>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ6WJXv4p1Dljv0_TyQWAllbMv0zFViIo&callback=initMap">
+    </script>
 </body>
 </html>
