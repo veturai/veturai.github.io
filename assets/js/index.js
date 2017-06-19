@@ -6,7 +6,7 @@
     var browserHeight = $(window).height();
 
     // Calculate new opacity
-    var opacity = 1 - Math.min(scrollTop / (browserHeight / 4), 1)
+    var opacity = 1 - Math.min(scrollTop / (browserHeight / 4), 1);
 
     $('.home__brand-wrapper').css({
       opacity: opacity
@@ -16,13 +16,22 @@
       opacity: opacity
     });
 
+    var navbar = $('.navbar');
+    var navbarLogo = $('.navbar__logo');
+
     if (opacity === 0.0) {
-      $('.navbar__logo').css({
+      navbarLogo.css({
         opacity: 1.0
       });
+      navbar.css({
+        'background-color': 'rgba(255,255,255,0.75)'
+      });
     } else {
-      $('.navbar__logo').css({
+      navbarLogo.css({
         opacity: 0.0
+      });
+      navbar.css({
+        'background-color': 'transparent'
       });
     }
   });
