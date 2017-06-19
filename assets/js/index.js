@@ -8,7 +8,11 @@
     // Calculate new opacity
     var opacity = 1 - Math.min(scrollTop / (browserHeight / 4), 1)
 
-    $('.content').css({
+    $('.home__brand-wrapper').css({
+      opacity: opacity
+    });
+
+    $('.icon-scroll').css({
       opacity: opacity
     });
 
@@ -26,12 +30,17 @@
   var generateMenuClicks = function() {
     $(".section-home").click(function (){
       $('html, body').animate({
-        scrollTop: $(".content").offset().top
+        scrollTop: $(".home").offset().top
       }, 500);
     });
     $(".section-company").click(function (){
       $('html, body').animate({
-        scrollTop: $(".our-company").offset().top
+        scrollTop: $(".company").offset().top
+      }, 500);
+    });
+    $(".section-services").click(function (){
+      $('html, body').animate({
+        scrollTop: $(".services").offset().top
       }, 500);
     });
   };
