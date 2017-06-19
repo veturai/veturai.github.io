@@ -41,6 +41,7 @@ body {
 }
 
 .navbar__logo {
+  font-family: 'Gruppo', 'Helvetica', sans-serif;
   font-size: 25px;
   margin-top: 10px;
 }
