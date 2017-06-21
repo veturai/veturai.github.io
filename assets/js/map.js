@@ -1,6 +1,18 @@
-function initMap() {
-  var centerPlace = {lat: 51.8686, lng: 10.57};
+var map;
+var mapCenter = {lat: 51.8686, lng: 10.57};
 
+function setMapZoom() {
+  var browserWidth = $(window).width();
+  if (browserWidth > 1600) {
+    map.setZoom(6);
+  } else if (browserWidth > 730) {
+    map.setZoom(5);
+  } else {
+    map.setZoom(4);
+  }
+}
+
+function initMap() {
   var styles = [
     {
       "featureType": "administrative",
@@ -127,9 +139,9 @@ function initMap() {
     }
   ];
 
-  var map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     zoom: 6,
-    center: centerPlace,
+    center: mapCenter,
     styles: styles,
     draggable: false,
     zoomControl: false,
@@ -150,4 +162,15 @@ function initMap() {
     position: londonPlace,
     map: map
   });
+
+  setMapZoom();
 }
+
+$(document).ready(function() {
+  google.maps.event.addDomListener(window, "load", initMap);
+  google.maps.event.addDomListener(window, "resize", function() {
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(mapCenter);
+    setMapZoom();
+  });
+});
